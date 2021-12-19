@@ -111,7 +111,9 @@ if (clickCount == 0) {
 }
   )
 
-buttonHold.addEventListener("click",()=>{holdCount++;
+  buttonHold.addEventListener("click",()=>{
+    holdCount++;
+    if(clickCount>=2){
   if(holdCount%2==0){
 document.getElementById('status1').innerHTML = ('Your turn')
 document.getElementById('status2').innerHTML = ('So you want to hold! Good luck!')}
@@ -119,6 +121,7 @@ else{
     document.getElementById('status1').innerHTML = ('So you want to hold! Good luck!')
     document.getElementById('status2').innerHTML = ('Your turn')
   };
+}else return
 }
 );
 
